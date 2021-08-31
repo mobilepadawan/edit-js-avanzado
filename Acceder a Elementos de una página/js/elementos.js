@@ -1,6 +1,7 @@
 const frutas = ['Banana', 'Manzana', 'Pera', 'Frutilla', 'Mango', 'Papaya']
 
 //EJERCICIO BASICO 1
+//DIFERENCIAS ENTRE INNERTEXT e INNERHTML
 const titulo = "Acceso a elementos HTML"
 const parrafo1 = "Esto es una prueba de acceso a los elementos HTML de un documento homónimo. La idea es cargar de forma dinámica un listado de productos que guardados en un array."
 document.querySelector("h1").innerText = titulo
@@ -32,3 +33,5 @@ document.querySelector("p").innerText = parrafo1
 // }
 
 // cargarProductos()
+
+//
