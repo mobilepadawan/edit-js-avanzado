@@ -24,4 +24,3 @@ audio.buffered = true
 audio.autoplay = true
 audio.loop = true
 body.appendChild(audio)
-
