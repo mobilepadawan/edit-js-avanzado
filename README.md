@@ -11,5 +11,5 @@ En esta clase, hacemos un repaso por lo básico de este lenguaje, y nos metemos 
 * Acceder a los elementos de una página.
 
 ## Copia de las diapositivas de la clase 01
-
+[Diapositivas de la clase 01](https://github.com/mobilepadawan/edit-js-avanzado/blob/main/JavaScript%20avanzado%20-%20Clase%2001.pdf)
 
