@@ -1,7 +1,19 @@
+
+
 // alert("Hola, mundo!")
 // const nombre = prompt("Ingrese su nombre:","")
 // const acepto = confirm("Por favor, pulse ACEPTAR para confirmar que acepta los términos y condiciones establecidos")
 
+
+
+
+
+
+
+
+
+//FUNCIONES DE OPTIMIZACIÓN VERSUS FUNCIONES NO OPTIMIZADAS
+//PARA ESCRIBIR CÓDIGO HTML DESDE JAVASCRIPT DE MANERA OPTIMA
 function agregarUnTexto() {
    let imprimir = ``
    let parrafo = `<p>Hola, esto es un texto generado automáticamente</p>`
