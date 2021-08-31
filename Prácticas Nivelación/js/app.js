@@ -34,11 +34,11 @@
 
 //SU VERSION ARROW FUNCTIONS
 //ARROW FUNCTION convencional
-const saludar = ()=> {
-   const nombre = prompt("Ingrese su nombre:","")
-         alert(`Hola, ${nombre}`)
-         //saludarConParam(nombre)
-}
+// const saludar = ()=> {
+//    const nombre = prompt("Ingrese su nombre:","")
+//          alert(`Hola, ${nombre}`)
+//          //saludarConParam(nombre)
+// }
 
 //ARROW FUNCTION CON PARAMETRO
 // const saludarConParam = (nombre)=> {
@@ -50,20 +50,18 @@ const saludar = ()=> {
 // alert(`Hola, ${saludarConRetorno()}`)
 
 
-
-
 //FUNCIONES DE OPTIMIZACIÓN VERSUS FUNCIONES NO OPTIMIZADAS
 //PARA ESCRIBIR CÓDIGO HTML DESDE JAVASCRIPT DE MANERA OPTIMA
-function agregarUnTexto() {
-   let imprimir = ``
-   let parrafo = `<p>Hola, esto es un texto generado automáticamente</p>`
-      for (let i = 0; i < 1000; i++)
-         imprimir += parrafo
-      document.body.innerHTML += imprimir
-}
+// function agregarUnTexto() {
+//    let imprimir = ``
+//    let parrafo = `<p>Hola, esto es un texto generado automáticamente</p>`
+//       for (let i = 0; i < 1000; i++)
+//          imprimir += parrafo
+//       document.body.innerHTML += imprimir
+// }
 
-function agregarUnTextoNoOptimizado() {
-   let parrafo = `<p>Hola, esto es un texto generado automáticamente</p>`
-      for (let i = 0; i < 1000; i++)
-         document.body.innerHTML += parrafo
-}
+// function agregarUnTextoNoOptimizado() {
+//    let parrafo = `<p>Hola, esto es un texto generado automáticamente</p>`
+//       for (let i = 0; i < 1000; i++)
+//          document.body.innerHTML += parrafo
+// }
