@@ -1,4 +1,4 @@
-# EJERCICIOS
+# EJERCICIO 01
 
 ## Crear un Documento HTML
 Agregarle un elemento HTML del tipo título 1, sin texto asignado desde el HTML
@@ -6,8 +6,8 @@ Desde JavaScript, intercepta el elemento anterior, y agrégale como título 'Eje
 
 Agrega otro elemento HTML, del tipo paragraph, y genera un texto cualquiera. Puede ser con Lorem Ipsum
 Desde JavaScript, asocia el paragraph a una constante.
-Crea una hoja de estilos CSS en el documento HTML, y dentro de esta, una clase CSS que defina un color de fondo
-Asígnale al paragraph la clase creada, para que cambie su color de fondo
+Agrega una hoja de estilos CSS al documento HTML y, dentro de esta, crea una clase CSS que defina un color de fondo
+Asígnale al elemento HTML paragraph, mediante JAVASCRIPT, la clase creada para que cambie su color de fondo
 
 Crea desde JS, un elemento del tipo Titulo 2
 Genera una función que se llama nombreDeUsuario() la cual deberá solicitar el nombre del usuario mediante JS.prompt(), capturarlo en una variable, y escribir en el título 2 el resultado capturado
