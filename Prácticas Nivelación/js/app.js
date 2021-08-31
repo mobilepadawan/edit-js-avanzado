@@ -1,4 +1,4 @@
-
+//REPASAR CUADROS DE DIÁLOGO JAVASCRIPT
 
 // alert("Hola, mundo!")
 // const nombre = prompt("Ingrese su nombre:","")
