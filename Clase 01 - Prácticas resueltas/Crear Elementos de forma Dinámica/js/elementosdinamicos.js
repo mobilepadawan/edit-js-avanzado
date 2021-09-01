@@ -13,8 +13,7 @@ imagen.src = "cover/blank.jpg"
 //SIEMPRE VOY A LO SEGURO, PERO EN IMG NO PUDE HACER ANDAR ESTO
 // imagen.width = "300px"
 // imagen.height = "300px"
-imagen.setAttribute("width", "300px")
-imagen.setAttribute("height", "300px")
+imagen.setAttribute("width", "100%")
 body.appendChild(imagen)
 
 const audio = document.createElement("audio")
