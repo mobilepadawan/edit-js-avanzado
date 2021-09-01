@@ -11,5 +11,16 @@ En esta clase, hacemos un repaso por lo básico de este lenguaje, y nos metemos 
 * Acceder a los elementos de una página.
 
 ## Copia de las diapositivas de la clase 01
-[Diapositivas de la clase 01](https://github.com/mobilepadawan/edit-js-avanzado/blob/main/JavaScript%20avanzado%20-%20Clase%2001.pdf)
+[Diapositivas de la clase 01](https://1drv.ms/b/s!Al1tkr0omKJQg4Bjwn9dq8dsGjCZxg)
 
+## Clase 02
+Comenzamos a trabajar con las diferentes formas de escuchar y capturar eventos en JS:
+
+* Crear elementos HTML desde JS
+* Eventos JS
+* Escuchar Eventos
+* Detectar Eventos
+* Funciones callback
+
+## Copia de las diapositivas de la clase 02
+[Diapositivas de la clase 02](https://1drv.ms/b/s!Al1tkr0omKJQg4B1RpFScWiQeagqhQ)
