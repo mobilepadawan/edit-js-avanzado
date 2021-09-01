@@ -23,10 +23,6 @@ const frutas = ['Banana', 'Manzana', 'Pera', 'Frutilla', 'Mango', 'Papaya']
 
 
 
-
-
-
-
 //EJERCICIO BASICO 2 (GENERAR UN ARRAY DE UN MISMO ELEMENTO HTML)
 // const parrafosEnAzul = document.querySelectorAll("p")
 // console.log(`Total de elementos <p>: ${parrafosEnAzul.length}`) // me devuelve el total de elementos HTML del tipo <p>
