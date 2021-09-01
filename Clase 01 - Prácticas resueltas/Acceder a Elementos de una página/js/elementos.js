@@ -1,5 +1,5 @@
 const frutas = ['Banana', 'Manzana', 'Pera', 'Frutilla', 'Mango', 'Papaya']
-
+/*
 //EJERCICIO BASICO 1
 //DIFERENCIAS ENTRE INNERTEXT e INNERHTML
 // const titulo = "Acceso a elementos HTML"
@@ -7,6 +7,25 @@ const frutas = ['Banana', 'Manzana', 'Pera', 'Frutilla', 'Mango', 'Papaya']
 // document.querySelector("h1").innerText = titulo
 // document.querySelector("p").innerText = parrafo1
 //document.getElementsByTagName("p")[1].innerText = ""
+
+//EJERCICIO BASICO 4
+//debugger
+// function cargarProductos() {
+//     let listado = ''
+//     for (let f of frutas) {
+//         listado += `<li>${f}</li>`
+//     }
+//     document.querySelector("ul").innerHTML = listado
+// }
+
+// cargarProductos()
+*/
+
+
+
+
+
+
 
 //EJERCICIO BASICO 2 (GENERAR UN ARRAY DE UN MISMO ELEMENTO HTML)
 // const parrafosEnAzul = document.querySelectorAll("p")
@@ -23,18 +42,6 @@ const frutas = ['Banana', 'Manzana', 'Pera', 'Frutilla', 'Mango', 'Papaya']
 //    parrafosEnAzul[i].classList.add("orange-text")
 //TAMBIEN EXISTE classList.remove() PARA QUITAR
 //O classList.toggle() PARA AGREGAR O QUITAR SEGUN EL ESTADO
-
-//EJERCICIO BASICO 4
-//debugger
-// function cargarProductos() {
-//     let listado = ''
-//     for (let f of frutas) {
-//         listado += `<li>${f}</li>`
-//     }
-//     document.querySelector("ul").innerHTML = listado
-// }
-
-// cargarProductos()
 
 //EJERCICIO BASICO 5 (AGREGAR ATRIBUTOS A LOS ELEMENTOS)
 // const titulo = document.getElementsByTagName("h1")
