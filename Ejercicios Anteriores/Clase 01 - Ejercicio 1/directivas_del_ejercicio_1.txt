@@ -10,6 +10,6 @@ Agrega una hoja de estilos CSS al documento HTML y, dentro de esta, crea una cla
 Asígnale al elemento HTML paragraph, mediante JAVASCRIPT, la clase creada para que cambie su color de fondo
 
 Crea desde JS, un elemento del tipo Titulo 2
-Genera una función que se llama nombreDeUsuario() la cual deberá solicitar el nombre del usuario mediante JS.prompt(), capturarlo en una variable, y escribir en el título 2 el resultado capturado
+Genera una función que se llame nombreDeUsuario() la cual deberá solicitar el nombre del usuario mediante JS.prompt(), capturarlo en una variable, y escribir en el título 2 el resultado capturado
 Ten presente que la función será ejecutada desde la Consola JS. No la debes asignar a ningún elemento HTML que funcione como disparador
 
