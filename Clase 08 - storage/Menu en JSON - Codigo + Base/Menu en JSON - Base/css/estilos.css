@@ -1,0 +1,15 @@
+body {
+    font-family: 'Roboto', 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
+    color: grey;
+}
+
+.central {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+img {
+    margin-left: 5% !important;
+}
