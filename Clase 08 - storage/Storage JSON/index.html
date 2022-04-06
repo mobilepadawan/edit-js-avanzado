@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulario de datos</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <link href="css/estilos.css" rel="stylesheet">
+        <script defer src="js/variables.js"></script>
+        <script defer src="js/json.js"></script>
+        <script defer src="js/storage.js"></script>
+    </head>
+    <body>
+        <h1>Formulario</h1>
+            <div id="formulario" class="center">
+                <button id = "buscar" class="btn-floating waves-effect waves-light orange" alt="Buscar"><i class="material-icons">search</i></button>
+                <button id = "eliminar" class="btn-floating waves-effect waves-light red darken-2" alt="Eliminar"><i class="material-icons">delete</i></button>
+                <div>
+                    <label for="id">ID Contacto</label>
+                    <input type="number" id="id" placeholder="(automático)" tabindex="1" disabled>
+                </div>
+                <div>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" placeholder="Nombre completo" tabindex="2">    
+                </div>
+                <div>
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" placeholder="Número de teléfono" tabindex="3">
+                </div>
+                <div>
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" placeholder="Correo electrónico" tabindex="4">
+                </div>
+                <br>
+                <br>
+                <button id="enviar" class="btn blue white-text right" tabindex="5">Enviar</button>
+            </div>
+            <br><br>
+            <div>
+                <input type="text" id="filtrar" placeholder="Filtrar resultados por nombre">
+                <table>
+                    <thead class="black white-text">
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Teléfono</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ID</td>
+                            <td>Nombre de ejemplo</td>
+                            <td>1123456789</td>
+                            <td>email@ejemplo.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    </body>
+</html> 
