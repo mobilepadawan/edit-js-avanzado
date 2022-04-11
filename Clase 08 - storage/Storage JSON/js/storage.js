@@ -1,7 +1,8 @@
 const recuperoStorage = ()=> {
     strg = localStorage.getItem("arrayContactos")
     if (strg != null) {
-        arrayContactos = JSON.parse(strg)
+        debugger
+        arrayContactos = JSON.parse(decodificarContenido(strg))
         if (arrayContactos.length > 0) {
             cargoGrillaContactos(arrayContactos)
         }
@@ -10,7 +11,7 @@ const recuperoStorage = ()=> {
 
 const guardoContactosEnStorage = ()=> {
     if (arrayContactos.length > 0) {
-        localStorage.setItem("arrayContactos", JSON.stringify(arrayContactos))
+        localStorage.setItem("arrayContactos", codificarContenido(JSON.stringify(arrayContactos)))
     }
 }
 

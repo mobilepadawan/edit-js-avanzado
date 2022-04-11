@@ -1,4 +1,4 @@
-strContactos = '[{"id":1,"nombre":"Educación IT","telefono":"11222333","email":"info@educacionit.com"},{"id":2,"nombre":"ISTEA","telefono":"11333444","email":"info@istea.edu.ar"},{"id":3,"nombre":"Digitalers","telefono":"111555666","email":"info@digitalers.com"}]'
+strContactos = '[{"id":1,"nombre":"Educación IT","telefono":"11222333","email":"info@educacionit.com"},{"id":2,"nombre":"ISTEA","telefono":"11333444","email":"info@istea.edu.ar"},{"id":3,"nombre":"Digitalers","telefono":"111555666","email":"info@digitalers.com"},{"id":4,"nombre":"Coding Fake Institute","telefono":"111555667","email":"coding@fakeinstitute.com"}]'
 
 const guardoContacto = ()=> {
     const nuevoContacto = {id: arrayContactos.length + 1,
@@ -52,7 +52,7 @@ const buscarContacto = ()=> {
             }
         } 
 }
-
+ 
 btnBuscar.addEventListener("click", buscarContacto)
 
 inputFiltrar.addEventListener("keyup", (e)=> {
@@ -63,6 +63,22 @@ inputFiltrar.addEventListener("keyup", (e)=> {
     }
 })
 
+btnEliminar.addEventListener("click", ()=> {
+    debugger
+    let aBuscar = prompt("Ingrese el nombre a buscar:")
+        if (aBuscar == null || aBuscar.trim() =="") {
+            alert("No se encontró el contacto especificado.")
+        } else {
+            const indice = arrayContactos.findIndex(c => c.nombre == aBuscar.trim())
+                  if (indice != -1) {
+                      const confirma = confirm(`¿Realmente desea eliminar el Contacto ${aBuscar.trim()}`)
+                            if (confirma) {
+                                arrayContactos.splice(indice, 1)
+                                cargoTablaContactos(arrayContactos)
+                            }
+                  }
+        }
+})
 
 
 
