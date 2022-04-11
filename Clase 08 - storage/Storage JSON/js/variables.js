@@ -10,3 +10,12 @@ const inputFiltrar = document.querySelector("#filtrar")
 const tbody = document.querySelector("tbody")
 
 let arrayContactos = []
+
+
+const codificarContenido = (cont)=> {
+    return btoa(cont)
+}
+
+const decodificarContenido = (cont)=> {
+    return atob(cont)
+}
