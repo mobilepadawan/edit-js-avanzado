@@ -5,12 +5,15 @@
     <title>Cursos de Programación</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
     <script defer src="js/variables.js"></script>
     <script defer src="js/app.js"></script>
+    <script defer src="js/modal.js"></script>
 </head>
 <body>
     <main class="container">
         <h1>Cursos de programación</h1>
+        <a href="#" class="outline secondary" id="btnNuevo" role="button">+</a>
         <table>
             <thead>
                 <tr>
@@ -24,6 +27,38 @@
 
             </tbody>
         </table>
+        <dialog class="fondo-blanco">
+            <div class="grid">
+                <article>
+                    <header>
+                        <a class="close" onclick="closeModal()"></a>
+                        Modifique los datos del curso y pulse el botón CONFIRMAR
+                    </header>
+                        <form>
+                        <label for="id">
+                            ID
+                            <input type="number" id="id" placeholder="ID" disabled>
+                        </label>
+                        <label for="nombre">
+                            Nombre
+                            <input type="text" id="nombre" placeholder="Nombre del curso">
+                        </label>
+                        <label for="creado">
+                            Fecha de lanzamiento
+                            <input type="date" id="creado" placeholder="Fecha de lanzamiento">
+                        </label>
+                        <label for="duracion">
+                            Duración (en semanas)
+                            <input type="number" id="duracion" placeholder="Duración (en semanas)">
+                        </label>    
+                    </form>
+                    <footer>
+                        <a href="#" class="outline ocultar-boton" id="btnConfirmar" role="button">CONFIRMAR</a>
+                        <a href="#" class="outline ocultar-boton" id="btnAgregar" role="button">AGREGAR</a>
+                    </footer>
+                </article>    
+            </div>
+        </dialog>
       </main>
 </body>
 </html>
