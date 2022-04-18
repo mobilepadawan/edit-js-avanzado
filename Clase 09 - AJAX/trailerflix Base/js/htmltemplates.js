@@ -2,12 +2,12 @@ const retornoCardContenido = (cont)=> {
    let HTMLCard = `<div class="col s12 m6 l3">
                         <div class="card z-depth-2">
                            <div class="card-image">
-                              <img loading="lazy" src="${cont.poster}" title="The Mandalorian">
-                              <a id="btn3}" class="btn-floating halfway-fab waves-effect waves-black red"><i class="material-icons" onclick="verDetalle(3)">search</i></a>
+                              <img loading="lazy" src="${cont.poster}" title="${cont.titulo}">
+                              <a id="btn3}" class="btn-floating halfway-fab waves-effect waves-black red"><i class="material-icons" onclick="verDetalle(${cont.id})">search</i></a>
                            </div>
                            <div class="card-content black">
-                              <p class="yellow-text">GÉNERO: <span class="white-text">Ciencia Ficción, Fantasía</span></p>
-                              <p class="yellow-text">TEMPORADAS: <span class="white-text">2</span></p>
+                              <p class="yellow-text">GÉNERO: <span class="white-text">${cont.genero}</span></p>
+                              <p class="yellow-text">TEMPORADAS: <span class="white-text">${cont.temporadas}</span></p>
                            </div>
                         </div>
                      </div>`
@@ -15,7 +15,14 @@ const retornoCardContenido = (cont)=> {
 }
 
 const retornoCardError = ()=> {
-   let HTMLCardError = ``
+   let HTMLCardError = `<div class="center white-text"> 
+                           <br><br> 
+                           <br><br> 
+                           <h4>El contenido parece no estar disponible. Intente nuevamente en unos minutos.</h4> 
+                           <br><br> 
+                           <i class="large material-icons">sentiment_very_dissatisfied</i> 
+                           <br><br> 
+                        </div>`
       return HTMLCardError
 }
 
