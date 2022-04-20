@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="light">
+<html lang="es" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <title>Cursos de Programación</title>
@@ -13,20 +13,26 @@
 <body>
     <main class="container">
         <h1>Cursos de programación</h1>
-        <a href="#" class="outline secondary" id="btnNuevo" role="button">+</a>
+        <a href="#" class="primary" id="btnNuevo" role="button" title="Agregar Curso">NUEVO CURSO</a>
+        <a href="#" class="secondary" id="btnEliminar" role="button" title="Eliminar Curso">ELIMINAR CURSO</a>
+        <br><br>
+        <hr>
         <table>
             <thead>
                 <tr>
-                    <th>Curso ID</th>
+                    <th>Curso</th>
                     <th>Nombre</th>
                     <th>Lanzamiento</th>
                     <th>Duración (semanas)</th>
                 </tr>
             </thead>
             <tbody>
-
+                
             </tbody>
         </table>
+        <div id="cargando">
+            <a href="#" aria-busy="true">Cargando, por favor espere...</a>
+        </div>
         <dialog class="fondo-blanco">
             <div class="grid">
                 <article>
@@ -53,7 +59,7 @@
                         </label>    
                     </form>
                     <footer>
-                        <a href="#" class="outline ocultar-boton" id="btnConfirmar" role="button">CONFIRMAR</a>
+                        <a href="#" class="outline ocultar-boton" id="btnModificar" role="button">MODIFICAR</a>
                         <a href="#" class="outline ocultar-boton" id="btnAgregar" role="button">AGREGAR</a>
                     </footer>
                 </article>    

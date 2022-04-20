@@ -1,27 +1,27 @@
 const editarCurso = (param)=> {
-    //debugger
       const resultado = cursosJSON.find(c => c.id == param)
             inputID.value = parseInt(resultado.id)
             inputNombre.value = resultado.nombre
             inputCreado.value = resultado.creado
             inputDuracion.value = parseInt(resultado.duracion)
-            btnConfirmar.classList.toggle("ocultar-boton")
+            btnModificar.classList.remove("ocultar-boton")
             openModal()
 }
 
 const nuevoCurso = ()=> {
-    //debugger
-            inputID.value = 0
-            inputNombre.value = ""
-            inputCreado.value = ""
-            inputDuracion.value = 0
-            btnAgregar.classList.toggle("ocultar-boton")
-            openModal()
+      inputID.value = 0
+      inputNombre.value = ""
+      inputCreado.value = ""
+      inputDuracion.value = 0
+      btnAgregar.classList.remove("ocultar-boton")
+      openModal()
 }
 
 const HTMLtabla = (fila)=> {
     return `<tr>
-                <td onclick="editarCurso(${fila.id})">${fila.id}</td>
+                <td ondblclick="editarCurso(${fila.id})"
+                    title="Doble clic para Modificar"
+                    class="cell-colored">${fila.id}</td>
                 <td>${fila.nombre}</td>
                 <td>${fila.creado}</td>
                 <td>${fila.duracion}</td>
@@ -30,10 +30,9 @@ const HTMLtabla = (fila)=> {
 
 const obtenerCursos = async ()=> {
       const response = await fetch(URL)
-            if (response.status >= 200 && response.status < 300)
-                data = response.json()
-            else
-                data = dataError
+            response.status >= 400
+            ? data = dataError
+            : data = response.json()
             return data
 }
 
@@ -42,48 +41,77 @@ const cargoTablaCursos = async ()=> {
         cursosJSON = await obtenerCursos()
         await cursosJSON.forEach(curso => armoTabla += HTMLtabla(curso))
         filasTabla.innerHTML = armoTabla
+        cargando.remove()
 }
 
 cargoTablaCursos()
 
 const modificarCurso = async ()=> {
-    
-    id = parseInt(inputID.value)
-    const datos = {nombre: inputNombre.value,
-                   creado: inputCreado.value, 
-                   duracion: parseInt(inputDuracion.value)
-                  }
-          const FULLURL = `${URL}${id}`
-          const BODY = JSON.stringify(datos)
-          const OPTIONS = {
-                               method: 'PUT',
-                               headers: {
-                                           'Content-Type': 'application/json',
-                                        },
-                               body: BODY
-                           }
-          const response = await fetch(FULLURL, OPTIONS)
-                respuesta = await response.json()
-                console.table(respuesta)
+        id = parseInt(inputID.value)
+        const datos = {nombre: inputNombre.value,
+                    creado: inputCreado.value, 
+                    duracion: parseInt(inputDuracion.value)
+                    }
+        const FULLURL = `${URL}${id}`
+        const BODY = JSON.stringify(datos)
+        const OPTIONS = {
+                        method: 'PUT',
+                        headers: {
+                                    'Content-Type': 'application/json',
+                                },
+                        body: BODY
+                        }
+        const response = await fetch(FULLURL, OPTIONS)
+              respuesta = await response.json()
+              cargoTablaCursos()
+              btnModificar.classList.toggle("ocultar-boton")
 }
 
 const agregarCurso = async ()=> {
-    debugger
-    const datos = {nombre: inputNombre.value,
-                   creado: inputCreado.value || Date.now(),
-                   duracion: parseInt(inputDuracion.value) || 4 //mínimo 4 semanas
-                  }
-    const response = await fetch(URL, {
-                                        method: 'POST',
-                                        headers: {
-                                            'Content-Type': 'Application/json'
-                                        },
-                                        body: JSON.stringify(datos)
-                                    })
-        respuesta = await response.json()
-        inputID.value = respuesta.id
+        const datos = {nombre: inputNombre.value,
+                    creado: inputCreado.value || d.toLocaleDateString(),
+                    duracion: parseInt(inputDuracion.value) || 4 //mínimo 4 semanas
+                    }
+        const BODY = JSON.stringify(datos)
+        const OPTIONS = {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'Application/json'
+                        },
+                        body: BODY
+                        }
+        const response = await fetch(URL, OPTIONS)
+              respuesta = await response.json()
+              inputID.value = respuesta.id
+              cargoTablaCursos()
+              btnAgregar.classList.toggle("ocultar-boton")
 }
 
-btnConfirmar.addEventListener("click", modificarCurso)
+const eliminarCurso = async ()=> {
+    const cursoID = prompt("Ingrese el código del curso a Eliminar:")
+          respuesta = cursosJSON.find(c => c.id == cursoID) || false
+          if (!respuesta) {
+              alert(`No se encontró un curso con el ID: ${cursoID}`)
+              return
+          } else {
+              const confirmado = confirm("Esta operación no se podrá deshacer. ¿Desea continuar?")
+                    if (confirmado) {
+                        const FULLURL = `${URL}${cursoID}`
+                        const OPTIONS = {
+                                        method: 'DELETE',
+                                        headers: {
+                                            'Content-Type': 'Application/json'
+                                        }
+                                        }
+                        const response = await fetch(FULLURL, OPTIONS)
+                              respuesta = await response.json()
+                              console.table(respuesta)
+                              cargoTablaCursos()
+                    }
+          }
+}
+
+btnModificar.addEventListener("click", modificarCurso)
 btnNuevo.addEventListener("click", nuevoCurso)
 btnAgregar.addEventListener("click", agregarCurso)
+btnEliminar.addEventListener("click", eliminarCurso)

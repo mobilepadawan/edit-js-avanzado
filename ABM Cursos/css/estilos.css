@@ -5,3 +5,8 @@
 .ocultar-boton {
     display: none;
 }
+
+.cell-colored {
+    background-color: slategray;
+    text-align: right;
+}
