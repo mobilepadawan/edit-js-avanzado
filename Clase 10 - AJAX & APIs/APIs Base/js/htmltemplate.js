@@ -1,7 +1,7 @@
 const retornoHTMLUsuario = (usuario)=> {
       //usuario = JSON.parse(usuarioMuestra)
       HTMLTabla = `<tr class="white">
-                        <td><img src="${usuario.picture.large}" class="circle responsive-img"></td>
+                        <td><img src="${usuario.picture.large}" class="circle responsive-img" loading="lazy"></td>
                         <td>${usuario.name.first} ${usuario.name.last}</td>
                         <td>${usuario.location.city}, ${usuario.location.country}</td>
                         <td>${usuario.dob.age} años</td>

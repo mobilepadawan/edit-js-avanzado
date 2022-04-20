@@ -1,18 +1,11 @@
 function cargoAPIamigos() {
       tablaResultados.innerHTML = retornoHTMLPreloader()
-      // el método AJAX espera al menos dos parámetros. Tres, es el ideal.
-      //1) endpoint URL, 2) qué hago si todo OK, 3) qué hago ante un error.
-      // $.ajax({
-      //    url: URL,
-      //    success: ()=> {},
-      //    error: ()=> {}
-      // })
       $.ajax({
-         url: "https://randomuser.me/api/?results=5000",//&gender=female&nat=AU", //?results=50&nat=ES
-         success: (data)=> { //data ya vuelve como un JSON, no hace falta JSON.parse()
+         url: URL,
+         success: (data)=> {
             contenidoAPI = data.results
             console.table(contenidoAPI)
-            contenidoAPI.map(usuario => HTMLTabla += retornoHTMLUsuario(usuario))
+            contenidoAPI.forEach(usuario => HTMLTabla += retornoHTMLUsuario(usuario))
             tablaResultados.innerHTML = HTMLTabla
          },
          error: ()=> {
@@ -22,4 +15,13 @@ function cargoAPIamigos() {
       textoInicial.innerHTML = ""
 }
 
-btnBuscar.addEventListener("click", cargoAPIamigos)
+//Código propio de MATERIALIZE para inicializar la barra lateral
+const elem = document.querySelector('.sidenav')
+const options = "{edge: 'left', inDuration: 400, draggable: true, preventScrolling: true}"
+const latBar = M.Sidenav.init(elem, options);
+
+const abrirMenuLateral = ()=> {
+   latBar.open()
+}
+
+btnBuscar.addEventListener("click", abrirMenuLateral)

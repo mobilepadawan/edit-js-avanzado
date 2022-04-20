@@ -14,7 +14,7 @@
     <script defer src="js/editbook.js"></script>
   </head>
   <body>
-    <div class="navbar-fixed">
+    <div class="nav-wrapper">
       <nav>
         <div class="nav-wrapper blue darken-3">
           <a href="#!" class="brand-logo left separate-side-left white-text">edITbook</a>
@@ -27,6 +27,41 @@
         </div>
       </nav>
     </div>
+    <ul class="sidenav grey lighten-5" id="mobile-demo">
+      <li>
+        <a href="#">PARÁMETROS DE BÚSQUEDA</a>
+      </li>
+        <p>Género:</p>
+        <select class="browser-default" id="selectGender">
+            <option value="" disabled selected>Todos</option>
+            <option value="Male">Masculino</option>
+            <option value="Female">Femenino</option>
+        </select>
+      </li>
+      <br>
+      <li>
+        <p>Nacionalidad:</p>
+        <select class="browser-default" id="selectNat">
+          <option value="" disabled selected>Todas</option>
+          <option value="ES">Español</option>
+          <option value="GB">Inglés</option>
+          <option value="BR">Brasilero</option>
+          <option value="US">Estadounidense</option>
+          <option value="NZ">Neozelandés</option>
+          <option value="AU">Australiano</option>
+        </select>
+      </li>
+      <br>
+      <li>
+        <p>Resultado máximo:</p>
+        <div class="input-field">
+          <input type="number" min="10" max="50" value="10">
+        </div>
+      </li>
+      <li>
+        <a href="#" id="btnParamsBuscar" class="btn btn-flat blue darken-3 white-text waves-effect waves-light">buscar</a>
+      </li>
+    </ul>
     <div id="textoInicial" class="lightgrey-text wide-80">
         <br><br>
         <i class="large material-icons">people</i>
