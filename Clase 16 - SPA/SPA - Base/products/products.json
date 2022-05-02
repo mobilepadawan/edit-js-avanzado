@@ -1,0 +1,42 @@
+[
+   {
+   "id": 1,
+   "name": "Notebook Gamer Sir Marillion"
+   }, 
+   {
+      "id":2,
+      "name": "Notebook Republic of Gamers"   
+   },
+   {
+      "id":3,
+      "name": "Ultrabook EXO"   
+   },
+   {
+      "id":4,
+      "name": "Teclado inalámbrico ESP dual (BT)"   
+   },
+   {
+      "id":5,
+      "name": "Teclado ESP con Pad numérico"   
+   },
+   {
+      "id":6,
+      "name": "Mouse Pad táctil"   
+   },
+   {
+      "id":7,
+      "name": "Mouse inalámbrico-BT Logi"   
+   },
+   {
+      "id":8,
+      "name": "Webcam FHD con micrófono Logi"   
+   },
+   {
+      "id":9,
+      "name": "Silla ergonómica Oficina-Gaming"   
+   },
+   {
+      "id":10,
+      "name": "Tira 50 LEDs con USB y 10 efectos"   
+   }
+]

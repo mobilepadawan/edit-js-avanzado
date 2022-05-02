@@ -1,0 +1,12 @@
+.fondo-blanco {
+    background-color: whitesmoke !important;
+}
+
+.ocultar-boton {
+    display: none;
+}
+
+.cell-colored {
+    background-color: slategray;
+    text-align: right;
+}

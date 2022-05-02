@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Vue JS SPA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="materialize/materialize.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="materialize/materialize.min.js"></script>
+    <script defer src="js/variables.js"></script>
+    <script defer src="js/htmltemplates.js"></script>
+    <!-- <script defer src="js/logica.js"></script>
+    <script defer src="js/app.js"></script> -->
+    <script src="js/productos.js"></script>
+  </head>
+  <body>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper blue darken-1">
+          <a href="#" class="brand-logo left separate-side-left white-text hide-on-small-only">Vue JS - SPA</a>
+          <ul class="right hide-on-small-only">
+              <li>
+                  <a href="#principal" class="btn-flat white-text waves-effect waves-black" id="btnPrincipal">
+                    Principal
+                  </a>
+              </li>
+              <li>
+                  <a href="#productos" class="btn-flat white-text waves-effect waves-black" id="productos">
+                    Productos
+                  </a>
+              </li>
+              <li>
+                  <a href="#blog" class="btn-flat white-text waves-effect waves-black" id="btnBlog">
+                    Blog
+                  </a>
+              </li>
+              <li>
+                <a href="#ayuda" class="btn-flat white-text waves-effect waves-black" id="btnAyuda">
+                  Ayuda
+                </a>
+              </li>
+            </ul>
+            <ul class="right hide-on-med-and-up">
+                <li>
+                  <a href="#principal" class="btn-flat white-text waves-effect waves-black" id="btnPrincipal">
+                    <i class="material-icons white-text large">home</i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#productos" class="btn-flat white-text waves-effect waves-black" id="productos">
+                    <i class="material-icons white-text large">format_list_bulleted</i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#blog" class="btn-flat white-text waves-effect waves-black" id="btnBlog">
+                    <i class="material-icons white-text large">speaker_notes</i>
+                  </a>
+              </li>
+              <li>
+                <a href="#ayuda" class="btn-flat white-text waves-effect waves-black" id="btnAyuda">
+                  <i class="material-icons white-text large">help</i>
+                </a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    </div>
+    <main>
+        <div id="main" class="wide-80 center">
+            <div id="principal">
+              <br><br>
+              <h1>Bienvenidos</h1>
+              <i class="material-icons large">school</i>
+              <p>Bienvenidos a la construcción de una SPA, a través del curso de Vue JS.</p> <!-- <span class="blue-text font-bold">JavaScript Avanzado de Educación IT</span>.</p> -->
+              <p>Utiliza el menú superior para poder navegar entre las distintas páginas.</p>  
+          </div>
+          <div id="productos" class="left-align">
+            <h1>Productos</h1>
+            <p>Aquí encontrará un listado de nuestros productos. Todo lo aquí listado tiene Stock:</p>
+            <div id="loader" class="center">
+               <div class="preloader-wrapper active">
+                  <div class="spinner-layer spinner-blue-only">
+                     <div class="circle-clipper left">
+                        <div class="circle"></div>
+                     </div><div class="gap-patch">
+                        <div class="circle"></div>
+                     </div><div class="circle-clipper right">
+                        <div class="circle"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <ol id="listadoProductos">
+            <!-- Aquí se carga el listado de productos mediante AJAX -->
+            </ol>
+         </div>
+         <div id="blog" class="left-align">
+            <h1>Blog de noticias</h1>
+            <p>Manténgase al tanto con las noticias de nuestra empresa.</p>
+            <h5>Noticia 1</h5>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae amet similique libero omnis ut porro magnam voluptates possimus provident vitae, dolore architecto! Aperiam fugiat iusto, dolor corporis omnis repellendus quos.</p>
+            <br>
+            <h5>Noticia 2</h5>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae amet similique libero omnis ut porro magnam voluptates possimus provident vitae, dolore architecto! Aperiam fugiat iusto, dolor corporis omnis repellendus quos.</p>
+            <br>
+            <h5>Noticia 3</h5>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae amet similique libero omnis ut porro magnam voluptates possimus provident vitae, dolore architecto! Aperiam fugiat iusto, dolor corporis omnis repellendus quos.</p>
+            <br>
+            <h5>Noticia 4</h5>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae amet similique libero omnis ut porro magnam voluptates possimus provident vitae, dolore architecto! Aperiam fugiat iusto, dolor corporis omnis repellendus quos.</p>
+        </div>
+          <div id="error" class="red darken-3 white-text borders z-depth-4">
+            <h1>404</h1>
+            <i class="material-icons white-text large">warning</i>
+            <h4>No se encontró el recurso o página solicitada.</h4>
+            <p>Intente nuevamente en unos minutos.</p>
+            <i class="material-icons white-text large">sentiment_very_dissatisfied</i>
+        </div>
+        <div id="ayuda" class="left-align">
+          <div class="center">
+          <br>
+          <i class="material-icons large">help_outline</i>
+          </div>
+          <h1>Bienvenido a la Ayuda</h1>
+          <p>Pulse los botones de la barra de navegación superior para cargar el contenido de dicha sección. Estos le permitirán navegar fácilmente por nuestra plataforma.</p>
+          <p>También puede utilizar el historial generado en el navegador web y desplazarse entre páginas a través de los botones <span><i class="material-icons smaller blue-text">arrow_back</i><span>  y  <span><i class="material-icons blue-text smaller">arrow_forward</i></span> de su navegador web.
+          </p>
+          <br>
+          <p class="blue-text">GRACIAS POR UTILIZAR NUESTRO SISTEMA DE AYUDA!</p>
+       </div>
+        </div>
+    </main>
+  </body>
+</html>
